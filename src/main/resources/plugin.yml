@@ -1,0 +1,7 @@
+name: Backpacks
+version: '${project.version}'
+main: me.syntheticdev.backpacks.Backpacks
+api-version: 1.19
+authors: [ SyntheticDev ]
+description: Who needs shulker boxes when you can have backpacks!
+depend: [ ResourceManager ]
