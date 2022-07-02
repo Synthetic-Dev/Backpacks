@@ -1,13 +1,7 @@
 package me.syntheticdev.backpacks;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
-import org.bukkit.Tag;
-import org.bukkit.inventory.FurnaceRecipe;
-import org.bukkit.inventory.RecipeChoice;
-import org.bukkit.inventory.ShapedRecipe;
-import org.bukkit.inventory.ShapelessRecipe;
+import org.bukkit.*;
+import org.bukkit.inventory.*;
 
 public class Recipes {
 
@@ -41,6 +35,31 @@ public class Recipes {
             recipe.setIngredient('I', Material.IRON_BLOCK);
             recipe.setIngredient('W', new RecipeChoice.MaterialChoice(Tag.WOOL));
             recipe.setIngredient('L', new RecipeChoice.ExactChoice(Items.LEATHER_TANNED.create()));
+            Bukkit.addRecipe(recipe);
+        }
+        {
+            NamespacedKey recipeKey = new NamespacedKey(Backpacks.getPlugin(), "backpack_dye");
+            ShapelessRecipe recipe = new ShapelessRecipe(recipeKey, Items.BACKPACK.create());
+            recipe.addIngredient(new RecipeChoice.MaterialChoice(
+                    Material.WHITE_DYE,
+                    Material.LIGHT_GRAY_DYE,
+                    Material.GRAY_DYE,
+                    Material.BLACK_DYE,
+                    Material.YELLOW_DYE,
+                    Material.ORANGE_DYE,
+                    Material.RED_DYE,
+                    Material.BROWN_DYE,
+                    Material.LIME_DYE,
+                    Material.GREEN_DYE,
+                    Material.LIGHT_BLUE_DYE,
+                    Material.CYAN_DYE,
+                    Material.BLUE_DYE,
+                    Material.PINK_DYE,
+                    Material.MAGENTA_DYE,
+                    Material.PURPLE_DYE
+            ));
+            recipe.addIngredient(Material.FEATHER);
+            recipe.setGroup("");
             Bukkit.addRecipe(recipe);
         }
     }

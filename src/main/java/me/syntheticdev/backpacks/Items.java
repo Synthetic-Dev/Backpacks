@@ -1,6 +1,6 @@
 package me.syntheticdev.backpacks;
 
-import me.syntheticdev.backpacks.items.Backpack;
+import me.syntheticdev.backpacks.items.Backpack.Backpack;
 import me.syntheticdev.backpacks.items.BoundLeather;
 import me.syntheticdev.backpacks.items.TannedLeather;
 import org.bukkit.plugin.PluginManager;

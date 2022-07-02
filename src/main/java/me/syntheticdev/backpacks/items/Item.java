@@ -19,6 +19,7 @@ public class Item {
     public Material getType() {
         return this.base;
     }
+    public String getName() { return this.name; }
 
     public boolean is(ItemStack item) {
         if (!item.getType().equals(this.base) || !item.hasItemMeta()) return false;
